@@ -1,12 +1,35 @@
 import pyterrier as pt
-from pyterrier_dr import FlexIndex, TctColBert
+from pyterrier.measures import *
+from pyterrier_dr import NumpyIndex, TctColBert
+import pandas as pd
 
-model = TctColBert()
+pt.init()
 
-index = FlexIndex("arguana.flex")
+model = TctColBert('castorini/tct_colbert-v2-msmarco')
+index = NumpyIndex('indices/arguana_tct_colbert_v2_msmarco.np')
 
-retr_pipeline = model >> index.np_retriever()
+retrieval_pipeline = model >> index
 
-print(retr_pipeline.search('African countries'))
+query = "African"
 
-# retr_pipeline = model >> index.faiss_hnsw_retriever()
+query_df = pd.DataFrame([{"qid": "1", "query": query}])
+
+results = retrieval_pipeline.transform(query_df)
+
+print("Dense Retriever")
+print(results.head(10))
+
+index_ref = pt.IndexFactory.of("/home/obez/InformationRetrieval/indices/arguana_bm25_index")
+
+bm25 = pt.BatchRetrieve(
+    index_ref,
+    wmodel="BM25",
+    metadata=["docno", "text"],
+    properties={"termpipelines": ""},
+    controls={"qe": "off"},
+)
+
+
+query_df = pd.DataFrame([{"qid": "1", "query": query}])
+print("BM25")
+print((bm25 % 10).transform(query_df))

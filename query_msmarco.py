@@ -1,24 +1,33 @@
 import pyterrier as pt
+from pyterrier.measures import *
+from pyterrier_dr import NumpyIndex, TctColBert
+import pandas as pd
 
-# Start PyTerrier
-if not pt.started():
-    pt.init()
+pt.init()
 
-from pyterrier_dr import FlexIndex
+model = TctColBert('castorini/tct_colbert-v2-msmarco')
+index_ref = NumpyIndex('indices/msmarco_passages_tct_colbert_v2_msmarco.np')
 
-# Load known dense FlexIndex for MS MARCO Document (tasb variant)
-index = FlexIndex.from_dataset(
-    dataset="msmarco_document",
-    variant="tasb-distilroberta-base-msmarco"
+dense_retrieval = model >> index_ref
+
+index = pt.IndexFactory.of("/home/obez/InformationRetrieval/indices/msmarco_passages_bm25_index")
+
+bm25 = pt.BatchRetrieve(
+    index,
+    wmodel="BM25",
+    metadata=["docno", "text"],
+    properties={"termpipelines": ""},
+    controls={"qe": "off"},
 )
 
-# Create a retriever from the index
-retriever = index.query()
+dataset = pt.get_dataset('irds:msmarco-passage/dev/small').get_qrels()
 
-# Run a test query
-query = "What is the capital of France?"
-results = retriever.search(query)
 
-# Show top results
-print(results[['docno', 'score']].head())
+print(len(set(pt.get_dataset('irds:msmarco-passage/dev/small').get_qrels()["qid"])))
 
+# pt.Experiment(
+#     [dense_retrieval],
+#     dataset.get_topics()[:2_000],
+#     dataset.get_qrels(),
+#     eval_metrics=[pt.measures.nDCG@10, pt.measures.RR@10],
+# )

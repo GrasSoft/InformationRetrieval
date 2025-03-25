@@ -1,38 +1,29 @@
-from  pyterrier_dr import FlexIndex,  RetroMAE, TctColBert
-import torch
 import pyterrier as pt
+from pyterrier_dr import NumpyIndex, TctColBert
+import torch
+from pathlib import Path
 
 pt.init()
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print("Using device:", device)
 
-model = TctColBert() 
+model = TctColBert('castorini/tct_colbert-v2-msmarco') 
 model.model.to(device)
 
 dataset = pt.get_dataset('irds:beir/arguana')
-corpus_iter = dataset.get_corpus_iter()
 
-index = FlexIndex("arguana.flex")
+index_pipeline = model >> NumpyIndex('indices/arguana_tct_colbert_v2_msmarco.np')
 
-pipeline = model >> index.indexer()
-
-batch_size = 100_000
-batch = []
-counter = 0
+index_pipeline.index(dataset.get_corpus_iter())
 
 
-for i, doc in enumerate(corpus_iter):
-    batch.append(doc)
-    if len(batch) >= batch_size:
-        print(f"Indexing batch {counter + 1} (docs {i - batch_size + 1} to {i})")
-        pipeline.index(batch)
-        batch = []
-        counter += 1
+index_path = Path("/home/obez/InformationRetrieval/indices/arguana_bm25_index")
+index_path.mkdir(parents=True, exist_ok=True)
 
-# Final remaining batch
-if batch:
-    print(f"Indexing final batch {counter + 1}")
-    pipeline.index(batch)
+indexer = pt.index.IterDictIndexer(
+    str(index_path),
+    meta={"docno": 100, "text": 131072},
+)
 
-print(counter)
+index_ref = indexer.index(dataset.get_corpus_iter())
