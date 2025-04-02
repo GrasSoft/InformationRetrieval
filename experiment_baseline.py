@@ -54,7 +54,7 @@ print(f"The dataset used is: {dataset.info_url()}")
 
 
 
-if sys.argv[2] == "mod":
+if len(sys.argv) > 2 and sys.argv[2] == "mod":
     for filename in os.listdir(f"./query_short/{sys.argv[1]}"):
         topics = pd.read_csv(f"./query_short/{sys.argv[1]}/{filename}").drop(columns=['orig_query'])[:500]
         topics['qid'] = topics['qid'].astype(str)
@@ -68,8 +68,8 @@ if sys.argv[2] == "mod":
             dataframe=True,
         )
 
-        if not os.path.exists("./modified/"):
-            os.makedirs("./modified/")
+        if not os.path.exists(f"./modified/{sys.argv[1]}"):
+            os.makedirs(f"./modified/{sys.argv[1]}")
 
         results.to_csv(f"./modified/{sys.argv[1]}/{filename}_experiment.csv")
 
