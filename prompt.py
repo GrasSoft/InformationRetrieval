@@ -22,10 +22,10 @@ if len(sys.argv) > 2:
 	message = sys.argv[2]
 
 
-dataset = pt.get_dataset('irds:msmarco-passage/dev/small')
+dataset = pt.get_dataset('irds:beir/arguana')
 
 
-newpath = "./query_short/ms_marco_passage/"
+newpath = "./query_short/arguana/"
 
 if not os.path.exists(newpath):
     os.makedirs(newpath)
@@ -120,7 +120,7 @@ for idx, prompt in enumerate(prompts):
 			"options": {
 				"seed": 42,
 				"temperature": 0.5,
-				"max_tokens": 150, # change for arguana
+				"max_tokens": 250, # change for arguana
 				"presence_penalty": 0.1,
 				"frequency_penalty": 0.1
 			}
@@ -139,6 +139,6 @@ for idx, prompt in enumerate(prompts):
 
 
 	df_topics = pd.DataFrame(rows, columns=["qid", "query", "orig_query"])
-	df_topics.to_csv(f"./query_short/ms_marco_passage/{names[idx]}.csv", index=False)
+	df_topics.to_csv(f"./query_short/arguana/{names[idx]}.csv", index=False)
 
 
