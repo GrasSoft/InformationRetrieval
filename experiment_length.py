@@ -51,24 +51,29 @@ for s in size:
 
     if len(sys.argv) > 2 and sys.argv[2] == "mod":
         for filename in os.listdir(f"./query_short/{sys.argv[1]}"):
-            topics = pd.read_csv(f"./query_short/{sys.argv[1]}/{filename}").drop(columns=['orig_query'])[:500]
-            topics['qid'] = topics['qid'].astype(str)
+            topics_mod = pd.read_csv(f"./query_short/{sys.argv[1]}/{filename}").drop(columns=['orig_query'])[:500]
+            
+            topics_mod['qid'] = topics_mod['qid'].astype(str)
+            if "query" in topics:
+                topics = topics.drop(columns=["query"])
+            
+            topics_mod = topics.merge(topics_mod, on="qid")
             
             results = pt.Experiment(
                 [bm25, dr],
-                topics,
+                topics_mod,
                 qrels,
                 eval_metrics=[nDCG@10, RR@10, R@10, R@100, P@10, P@100, SetP],
                 filter_by_topics=True,
                 dataframe=True,
             )
 
-            if not os.path.exists("./modified/"):
-                os.makedirs("./modified/")
+            if not os.path.exists(f"./modified/{sys.argv[1]}/{s}/"):
+                os.makedirs(f"./modified/{sys.argv[1]}/{s}/")
 
-            results.to_csv(f"./modified/{sys.argv[1]}/{filename}_experiment.csv")
+            results.to_csv(f"./modified/{sys.argv[1]}/{s}/{filename}_experiment.csv")
 
-            print(f"Saved results .csv in: ./modified/{sys.argv[1]}/{filename}_experiment.csv")
+            print(f"Saved results .csv in: ./modified/{sys.argv[1]}/{s}/{filename}_experiment.csv")
             
     else:
         results = pt.Experiment(

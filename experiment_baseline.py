@@ -32,13 +32,18 @@ if sys.argv[1] == "arguana":
 elif sys.argv[1] == "msmarco_passages":
     dataset = pt.get_dataset('irds:msmarco-passage/dev/small')
     topics = dataset.get_topics()[:500]
+elif sys.argv[1] == "trec_covid":
+    dataset = pt.get_dataset("irds:beir/trec-covid")
+    topics = dataset.get_topics('query')[:500]
 elif sys.argv[1] == "msmarco_passages_mis":
     dataset = pt.get_dataset('irds:msmarco-passage/dev/small')
     topics = pd.read_csv("./query_misspelled_datasets/irds:msmarco-passagedevsmall.csv").drop(columns=['query']).rename(columns={'modified_query': 'query'})[:500]
 elif sys.argv[1] == "arguana_mis":
     dataset = pt.get_dataset('irds:beir/arguana')
     topics = pd.read_csv("./query_misspelled_datasets/irds:beirarguana.csv").drop(columns=['query']).rename(columns={'modified_query': 'query'})[:500]    
-
+elif sys.argv[1] == "trec_covid_mis":
+    dataset = pt.get_dataset("irds:beir/trec-covid")
+    topics = pd.read_csv("./query_misspelled_datasets/irds:beirtrec-covid.csv").drop(columns=['query']).rename(columns={'modified_query': 'query'})[:500]
 
 
 topics['qid'] = topics['qid'].astype(str)
