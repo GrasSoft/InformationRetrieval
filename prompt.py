@@ -22,10 +22,10 @@ if len(sys.argv) > 2:
 	message = sys.argv[2]
 
 
-dataset = pt.get_dataset('irds:beir/arguana')
+dataset = pt.get_dataset('irds:beir/trec-covid')
 
 
-newpath = "./query_short/arguana/"
+newpath = "./query_short/trec-covid/"
 
 if not os.path.exists(newpath):
     os.makedirs(newpath)
