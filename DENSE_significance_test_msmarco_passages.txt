@@ -1,0 +1,213 @@
+
+==============================
+Dataset: msmarco_passages | Size: small
+==============================
+
+
+Results for clean_prompt_zero_shot_expansion.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 6.7747, p = 0.0000
+    Wilcoxon:  stat = 177.0000, p = 0.0000
+  Metric: R@100
+    T-test:    stat = 6.8166, p = 0.0000
+    Wilcoxon:  stat = 79.5000, p = 0.0000
+  Metric: RR@10
+    T-test:    stat = 6.6385, p = 0.0000
+    Wilcoxon:  stat = 746.0000, p = 0.0000
+
+Results for clean_prompt_few_shot_expansion.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 8.0498, p = 0.0000
+    Wilcoxon:  stat = 132.0000, p = 0.0000
+  Metric: R@100
+    T-test:    stat = 9.0690, p = 0.0000
+    Wilcoxon:  stat = 30.5000, p = 0.0000
+  Metric: RR@10
+    T-test:    stat = 7.1543, p = 0.0000
+    Wilcoxon:  stat = 752.5000, p = 0.0000
+
+Results for clean_prompt_zero_shot_reduction.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 1.9572, p = 0.0519
+    Wilcoxon:  stat = 21.0000, p = 0.0522
+  Metric: R@100
+    T-test:    stat = 1.5733, p = 0.1175
+    Wilcoxon:  stat = 11.0000, p = 0.1401
+  Metric: RR@10
+    T-test:    stat = 0.7504, p = 0.4541
+    Wilcoxon:  stat = 216.5000, p = 0.2523
+
+Results for clean_prompt_few_shot_reduction.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 3.8057, p = 0.0002
+    Wilcoxon:  stat = 27.5000, p = 0.0002
+  Metric: R@100
+    T-test:    stat = 4.2143, p = 0.0000
+    Wilcoxon:  stat = 10.5000, p = 0.0001
+  Metric: RR@10
+    T-test:    stat = 3.0493, p = 0.0027
+    Wilcoxon:  stat = 315.5000, p = 0.0018
+
+Results for clean_prompt_zero_shot_keywords.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 2.7946, p = 0.0058
+    Wilcoxon:  stat = 68.5000, p = 0.0045
+  Metric: R@100
+    T-test:    stat = 3.0529, p = 0.0026
+    Wilcoxon:  stat = 30.0000, p = 0.0029
+  Metric: RR@10
+    T-test:    stat = 2.7926, p = 0.0058
+    Wilcoxon:  stat = 745.5000, p = 0.0014
+
+Results for clean_prompt_few_shot_keywords.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 2.5332, p = 0.0122
+    Wilcoxon:  stat = 60.0000, p = 0.0156
+  Metric: R@100
+    T-test:    stat = 1.9118, p = 0.0576
+    Wilcoxon:  stat = 11.0000, p = 0.0578
+  Metric: RR@10
+    T-test:    stat = 3.8602, p = 0.0002
+    Wilcoxon:  stat = 493.5000, p = 0.0000
+
+==============================
+Dataset: msmarco_passages | Size: medium
+==============================
+
+
+Results for clean_prompt_zero_shot_expansion.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 4.0817, p = 0.0001
+    Wilcoxon:  stat = 242.5000, p = 0.0001
+  Metric: R@100
+    T-test:    stat = 5.6291, p = 0.0000
+    Wilcoxon:  stat = 38.0000, p = 0.0000
+  Metric: RR@10
+    T-test:    stat = 4.0553, p = 0.0001
+    Wilcoxon:  stat = 1053.0000, p = 0.0000
+
+Results for clean_prompt_few_shot_expansion.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 4.7315, p = 0.0000
+    Wilcoxon:  stat = 214.0000, p = 0.0000
+  Metric: R@100
+    T-test:    stat = 5.5057, p = 0.0000
+    Wilcoxon:  stat = 37.0000, p = 0.0000
+  Metric: RR@10
+    T-test:    stat = 4.9440, p = 0.0000
+    Wilcoxon:  stat = 821.0000, p = 0.0000
+
+Results for clean_prompt_zero_shot_reduction.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 1.5783, p = 0.1164
+    Wilcoxon:  stat = 23.5000, p = 0.0906
+  Metric: R@100
+    T-test:    stat = 2.6937, p = 0.0078
+    Wilcoxon:  stat = 0.0000, p = 0.0082
+  Metric: RR@10
+    T-test:    stat = 0.8361, p = 0.4043
+    Wilcoxon:  stat = 121.0000, p = 0.1661
+
+Results for clean_prompt_few_shot_reduction.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 1.0508, p = 0.2949
+    Wilcoxon:  stat = 49.0000, p = 0.2859
+  Metric: R@100
+    T-test:    stat = 1.2671, p = 0.2068
+    Wilcoxon:  stat = 16.5000, p = 0.2059
+  Metric: RR@10
+    T-test:    stat = 1.1835, p = 0.2383
+    Wilcoxon:  stat = 229.5000, p = 0.1038
+
+Results for clean_prompt_zero_shot_keywords.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 1.7885, p = 0.0755
+    Wilcoxon:  stat = 66.0000, p = 0.0626
+  Metric: R@100
+    T-test:    stat = 2.3644, p = 0.0192
+    Wilcoxon:  stat = 5.0000, p = 0.0196
+  Metric: RR@10
+    T-test:    stat = 0.8030, p = 0.4231
+    Wilcoxon:  stat = 713.0000, p = 0.1940
+
+Results for clean_prompt_few_shot_keywords.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 3.5440, p = 0.0005
+    Wilcoxon:  stat = 48.5000, p = 0.0004
+  Metric: R@100
+    T-test:    stat = 2.9511, p = 0.0036
+    Wilcoxon:  stat = 6.5000, p = 0.0039
+  Metric: RR@10
+    T-test:    stat = 3.4530, p = 0.0007
+    Wilcoxon:  stat = 347.5000, p = 0.0000
+
+==============================
+Dataset: msmarco_passages | Size: large
+==============================
+
+
+Results for clean_prompt_zero_shot_expansion.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 4.9335, p = 0.0000
+    Wilcoxon:  stat = 86.0000, p = 0.0000
+  Metric: R@100
+    T-test:    stat = 2.6353, p = 0.0093
+    Wilcoxon:  stat = 105.0000, p = 0.0119
+  Metric: RR@10
+    T-test:    stat = 3.7527, p = 0.0002
+    Wilcoxon:  stat = 570.5000, p = 0.0000
+
+Results for clean_prompt_few_shot_expansion.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 3.2536, p = 0.0014
+    Wilcoxon:  stat = 131.0000, p = 0.0015
+  Metric: R@100
+    T-test:    stat = 3.5355, p = 0.0005
+    Wilcoxon:  stat = 34.5000, p = 0.0006
+  Metric: RR@10
+    T-test:    stat = 3.7717, p = 0.0002
+    Wilcoxon:  stat = 776.0000, p = 0.0004
+
+Results for clean_prompt_zero_shot_reduction.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 1.2674, p = 0.2069
+    Wilcoxon:  stat = 16.5000, p = 0.2059
+  Metric: R@100
+    T-test:    stat = 1.4188, p = 0.1580
+    Wilcoxon:  stat = 9.0000, p = 0.1573
+  Metric: RR@10
+    T-test:    stat = 0.6844, p = 0.4948
+    Wilcoxon:  stat = 67.0000, p = 0.2593
+
+Results for clean_prompt_few_shot_reduction.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 1.3451, p = 0.1806
+    Wilcoxon:  stat = 3.0000, p = 0.1797
+  Metric: R@100
+    T-test:    stat = 0.7060, p = 0.4813
+    Wilcoxon:  stat = 13.5000, p = 0.4795
+  Metric: RR@10
+    T-test:    stat = 2.2023, p = 0.0291
+    Wilcoxon:  stat = 82.0000, p = 0.0884
+
+Results for clean_prompt_zero_shot_keywords.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 3.0034, p = 0.0031
+    Wilcoxon:  stat = 48.0000, p = 0.0043
+  Metric: R@100
+    T-test:    stat = 1.3909, p = 0.1663
+    Wilcoxon:  stat = 28.0000, p = 0.1655
+  Metric: RR@10
+    T-test:    stat = 3.2462, p = 0.0014
+    Wilcoxon:  stat = 322.5000, p = 0.0005
+
+Results for clean_prompt_few_shot_keywords.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 3.1736, p = 0.0018
+    Wilcoxon:  stat = 70.0000, p = 0.0026
+  Metric: R@100
+    T-test:    stat = 0.4920, p = 0.6234
+    Wilcoxon:  stat = 24.0000, p = 0.6978
+  Metric: RR@10
+    T-test:    stat = 2.7708, p = 0.0063
+    Wilcoxon:  stat = 508.5000, p = 0.0028

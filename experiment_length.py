@@ -61,7 +61,7 @@ for s in size:
             topics_mod = topics.merge(topics_mod, on="qid")
             
             results = pt.Experiment(
-                [bm25],
+                [dr],
                 topics_mod,
                 qrels,
                 eval_metrics=[RR@10, R@10, R@100],
@@ -73,27 +73,26 @@ for s in size:
             if not os.path.exists(f"./modified/{sys.argv[1]}/{s}/"):
                 os.makedirs(f"./modified/{sys.argv[1]}/{s}/")
 
-            results.to_csv(f"./modified/{sys.argv[1]}/{s}/{filename}_experiment_perquery.csv")
+            results.to_csv(f"./modified/{sys.argv[1]}/{s}/{filename}_experiment_DENSE_perquery.csv")
 
-            print(f"Saved results .csv in: ./modified/{sys.argv[1]}/{s}/{filename}_experiment_perquery.csv")
+            print(f"Saved results .csv in: ./modified/{sys.argv[1]}/{s}/{filename}_experiment_DENSE_perquery.csv")
             
     else:
         results = pt.Experiment(
-            [bm25],
+            [dr],
             topics,
             qrels,
             eval_metrics=[RR@10, R@10, R@100],
             filter_by_topics=True,
-            dataframe=True,
-            perquery=True
+            dataframe=True, perquery = True
         )
 
         if not os.path.exists(f"./baseline/{s}"):
             os.makedirs(f"./baseline/{s}")
 
-        results.to_csv(f"./baseline/{sys.argv[1]}_{s}_perquery.csv")
+        results.to_csv(f"./baseline/{sys.argv[1]}_{s}_DENSE_perquery.csv")
 
-        print(f"Saved results .csv in: ./baseline/{sys.argv[1]}_{s}_perquery.csv")
+        print(f"Saved results .csv in: ./baseline/{sys.argv[1]}_{s}_DENSE_perquery.csv")
 
     # RR - Reciprocal Rank, absolute ordering
     # nDCG - ordering again
