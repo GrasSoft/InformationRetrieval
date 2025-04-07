@@ -33,7 +33,7 @@ for s in size:
         dataset = pt.get_dataset('irds:beir/arguana')        
     elif sys.argv[1] == "msmarco_passages":
         dataset = pt.get_dataset('irds:msmarco-passage/dev/small')
-    elif sys.argv[1] == "TREC_covid":
+    elif sys.argv[1] == "trec_covid":
         dataset = pt.get_dataset('irds:beir/trec-covid')
     topics = pd.read_csv(f"./query_length/{sys.argv[1]}_{s}.csv")
     
