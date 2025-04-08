@@ -1,0 +1,2 @@
+,name,RR@10,R@10,R@100
+0,(TctColBert('castorini/tct_colbert-v2-hnp-msmarco') >> <pyterrier_dr.indexes.NumpyIndex object at 0x7f492d319520>),0.7199074074074074,0.011743718108181127,0.07137694719785735

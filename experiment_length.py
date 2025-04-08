@@ -84,15 +84,15 @@ for s in size:
             qrels,
             eval_metrics=[RR@10, R@10, R@100],
             filter_by_topics=True,
-            dataframe=True, perquery = True
+            dataframe=True
         )
 
         if not os.path.exists(f"./baseline/{s}"):
             os.makedirs(f"./baseline/{s}")
 
-        results.to_csv(f"./baseline/{sys.argv[1]}_{s}_DENSE_perquery.csv")
+        results.to_csv(f"./baseline/{sys.argv[1]}_{s}_DENSE.csv")
 
-        print(f"Saved results .csv in: ./baseline/{sys.argv[1]}_{s}_DENSE_perquery.csv")
+        print(f"Saved results .csv in: ./baseline/{sys.argv[1]}_{s}_DENS.csv")
 
     # RR - Reciprocal Rank, absolute ordering
     # nDCG - ordering again

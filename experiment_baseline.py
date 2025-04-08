@@ -14,7 +14,7 @@ index_dr = NumpyIndex(f'indices/{str(sys.argv[1]).replace("_mis", "")}_tct_colbe
 dr = model >> index_dr
 
 # BM25
-index_bm25 = pt.IndexFactory.of(f"/home/obez/InformationRetrieval/indices/{str(sys.argv[1]).replace("_mis", "")}_bm25_index")
+index_bm25 = pt.IndexFactory.of(f"/home/obez/InformationRetrieval/indices/trec_covid_bm25_index")
 
 bm25 = pt.BatchRetrieve(
     index_bm25,
@@ -44,7 +44,9 @@ elif sys.argv[1] == "arguana_mis":
 elif sys.argv[1] == "trec_covid_mis":
     dataset = pt.get_dataset("irds:beir/trec-covid")
     topics = pd.read_csv("./query_misspelled_datasets/irds:beirtrec-covid.csv").drop(columns=['query']).rename(columns={'modified_query': 'query'})[:500]
-
+elif sys.argv[1] == "trec-covid-misspelled":
+    dataset = pt.get_dataset("irds:beir/trec-covid")
+    topics = dataset.get_topics("query")  
 
 topics['qid'] = topics['qid'].astype(str)
 qrels = dataset.get_qrels()
@@ -63,37 +65,37 @@ if len(sys.argv) > 2 and sys.argv[2] == "mod":
     for filename in os.listdir(f"./query_short/{sys.argv[1]}"):
         topics = pd.read_csv(f"./query_short/{sys.argv[1]}/{filename}").drop(columns=['orig_query'])[:500]
         topics['qid'] = topics['qid'].astype(str)
-        
+        print(topics)
         results = pt.Experiment(
-            [bm25, dr],
+            [bm25],
             topics,
             qrels,
-            eval_metrics=[nDCG@10, RR@10, R@10, R@100, P@10, P@100, SetP],
+            eval_metrics=[RR@10, R@10, R@100],
             filter_by_topics=True,
-            dataframe=True,
+            dataframe=True, perquery = True
         )
 
         if not os.path.exists(f"./modified/{sys.argv[1]}"):
             os.makedirs(f"./modified/{sys.argv[1]}")
 
-        results.to_csv(f"./modified/{sys.argv[1]}/{filename}_experiment.csv")
+        results.to_csv(f"./modified/{sys.argv[1]}/{filename}_experiment_perquery.csv")
 
-        print(f"Saved results .csv in: ./modified/{sys.argv[1]}/{filename}_experiment.csv")
+        print(f"Saved results .csv in: ./modified/{sys.argv[1]}/{filename}_experiment_perquery.csv")
          
 else:
     results = pt.Experiment(
-        [bm25, bo1, kl, dr],
+        [bm25],
         topics,
         qrels,
-        eval_metrics=[nDCG@10, RR@10, R@10, R@100, P@10, P@100, SetP],
+        eval_metrics=[RR@10, R@10, R@100],
         filter_by_topics=True,
-        dataframe=True,
+        dataframe=True, perquery = True
     )
 
     if not os.path.exists("./baseline/"):
         os.makedirs("./baseline/")
 
-    results.to_csv(f"./baseline/{sys.argv[1]}.csv")
+    results.to_csv(f"./baseline/{sys.argv[1]}_perquery.csv")
 
     print(f"Saved results .csv in: ./baseline/{sys.argv[1]}.csv")
 
