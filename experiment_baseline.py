@@ -9,7 +9,7 @@ pt.init()
 
 # Dense Retrieval
 model = TctColBert('castorini/tct_colbert-v2-hnp-msmarco')
-index_dr = NumpyIndex(f'indices/{str(sys.argv[1]).replace("_mis", "")}_tct_colbert_v2_hnp_msmarco.np')
+index_dr = NumpyIndex(f'indices/trec_covid_tct_colbert_v2_hnp_msmarco.np')
 
 dr = model >> index_dr
 
@@ -46,7 +46,7 @@ elif sys.argv[1] == "trec_covid_mis":
     topics = pd.read_csv("./query_misspelled_datasets/irds:beirtrec-covid.csv").drop(columns=['query']).rename(columns={'modified_query': 'query'})[:500]
 elif sys.argv[1] == "trec-covid-misspelled":
     dataset = pt.get_dataset("irds:beir/trec-covid")
-    topics = dataset.get_topics("query")  
+    topics = dataset.get_topics('query')
 
 topics['qid'] = topics['qid'].astype(str)
 qrels = dataset.get_qrels()
@@ -64,10 +64,11 @@ print(f"The dataset used is: {dataset.info_url()}")
 if len(sys.argv) > 2 and sys.argv[2] == "mod":
     for filename in os.listdir(f"./query_short/{sys.argv[1]}"):
         topics = pd.read_csv(f"./query_short/{sys.argv[1]}/{filename}").drop(columns=['orig_query'])[:500]
+        print(topics)
         topics['qid'] = topics['qid'].astype(str)
         print(topics)
         results = pt.Experiment(
-            [bm25],
+            [dr],
             topics,
             qrels,
             eval_metrics=[RR@10, R@10, R@100],
@@ -78,13 +79,13 @@ if len(sys.argv) > 2 and sys.argv[2] == "mod":
         if not os.path.exists(f"./modified/{sys.argv[1]}"):
             os.makedirs(f"./modified/{sys.argv[1]}")
 
-        results.to_csv(f"./modified/{sys.argv[1]}/{filename}_experiment_perquery.csv")
+        results.to_csv(f"./modified/{sys.argv[1]}/{filename}_experiment_DENSE_perquery.csv")
 
-        print(f"Saved results .csv in: ./modified/{sys.argv[1]}/{filename}_experiment_perquery.csv")
+        print(f"Saved results .csv in: ./modified/{sys.argv[1]}/{filename}_experiment_DENSE_perquery.csv")
          
 else:
     results = pt.Experiment(
-        [bm25],
+        [dr],
         topics,
         qrels,
         eval_metrics=[RR@10, R@10, R@100],
@@ -95,9 +96,9 @@ else:
     if not os.path.exists("./baseline/"):
         os.makedirs("./baseline/")
 
-    results.to_csv(f"./baseline/{sys.argv[1]}_perquery.csv")
+    results.to_csv(f"./baseline/{sys.argv[1]}_DENSE_perquery.csv")
 
-    print(f"Saved results .csv in: ./baseline/{sys.argv[1]}.csv")
+    print(f"Saved results .csv in: ./baseline/{sys.argv[1]}_DENSE.csv")
 
 # RR - Reciprocal Rank, absolute ordering
 # nDCG - ordering again

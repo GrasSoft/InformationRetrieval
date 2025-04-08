@@ -10,13 +10,13 @@ parser.add_argument("dataset", type=str, help="Dataset name (e.g., arguana, msma
 args = parser.parse_args()
 
 dataset = args.dataset
-sizes = ["small", "medium", "large"]
-output_path = f"significance_test_{dataset}.txt"
+sizes = ["small"] #, "medium", "large"]
+output_path = f"significance_test_{dataset}_DENSE_misspelled.txt"
 
 # --- Significance Testing ---
 with open(output_path, "w") as outfile:
     for size in sizes:
-        baseline_path = f"./baseline/{dataset}_{size}_perquery.csv"
+        baseline_path = f"./baseline/trec-covid-misspelled_DENSE_perquery.csv"
 
         if not os.path.exists(baseline_path):
             outfile.write(f"\nBaseline file missing for size '{size}'\n")
@@ -25,7 +25,7 @@ with open(output_path, "w") as outfile:
         baseline = pd.read_csv(baseline_path)
         baseline['qid'] = baseline['qid'].astype(str)
 
-        mod_dir = f"./modified/{dataset}/{size}"
+        mod_dir = f"./modified/trec-covid-misspelled"
         if not os.path.exists(mod_dir):
             outfile.write(f"\nNo modified results directory for size '{size}'\n")
             continue
@@ -35,7 +35,7 @@ with open(output_path, "w") as outfile:
         outfile.write(f"==============================\n\n")
 
         for filename in os.listdir(mod_dir):
-            if not filename.endswith("_perquery.csv"):
+            if not filename.endswith("DENSE_perquery.csv"):
                 continue
 
             outfile.write(f"\nResults for {filename}:\n")

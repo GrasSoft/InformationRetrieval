@@ -1,0 +1,38 @@
+
+==============================
+Dataset: trec-covid-misspelled | Size: small
+==============================
+
+
+Results for clean_prompt_zero_shot_expansion.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 4.8601, p = 0.0000
+    Wilcoxon:  stat = 115.0000, p = 0.0000
+  Metric: R@100
+    T-test:    stat = 5.2404, p = 0.0000
+    Wilcoxon:  stat = 166.0000, p = 0.0000
+  Metric: RR@10
+    T-test:    stat = 4.1406, p = 0.0001
+    Wilcoxon:  stat = 73.5000, p = 0.0003
+
+Results for clean_prompt_zero_shot_reduction.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 2.7429, p = 0.0085
+    Wilcoxon:  stat = 45.0000, p = 0.0047
+  Metric: R@100
+    T-test:    stat = 2.2856, p = 0.0266
+    Wilcoxon:  stat = 94.0000, p = 0.0131
+  Metric: RR@10
+    T-test:    stat = 2.6650, p = 0.0104
+    Wilcoxon:  stat = 22.5000, p = 0.0102
+
+Results for clean_prompt_zero_shot_keywords.csv_experiment_DENSE_perquery.csv:
+  Metric: R@10
+    T-test:    stat = 3.0391, p = 0.0038
+    Wilcoxon:  stat = 59.0000, p = 0.0054
+  Metric: R@100
+    T-test:    stat = 2.9957, p = 0.0043
+    Wilcoxon:  stat = 142.0000, p = 0.0027
+  Metric: RR@10
+    T-test:    stat = 2.8614, p = 0.0062
+    Wilcoxon:  stat = 27.5000, p = 0.0064

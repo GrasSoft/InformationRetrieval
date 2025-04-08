@@ -1,0 +1,38 @@
+
+==============================
+Dataset: trec_covid | Size: small
+==============================
+
+
+Results for clean_prompt_zero_shot_expansion.csv_experiment_perquery.csv:
+  Metric: R@10
+    T-test:    stat = -1.9902, p = 0.0522
+    Wilcoxon:  stat = 134.0000, p = 0.0089
+  Metric: R@100
+    T-test:    stat = -2.1370, p = 0.0376
+    Wilcoxon:  stat = 285.0000, p = 0.0143
+  Metric: RR@10
+    T-test:    stat = -4.4101, p = 0.0001
+    Wilcoxon:  stat = 58.5000, p = 0.0003
+
+Results for clean_prompt_zero_shot_reduction.csv_experiment_perquery.csv:
+  Metric: R@10
+    T-test:    stat = -3.9731, p = 0.0002
+    Wilcoxon:  stat = 27.0000, p = 0.0000
+  Metric: R@100
+    T-test:    stat = -4.4469, p = 0.0000
+    Wilcoxon:  stat = 49.0000, p = 0.0000
+  Metric: RR@10
+    T-test:    stat = -5.4682, p = 0.0000
+    Wilcoxon:  stat = 11.0000, p = 0.0000
+
+Results for clean_prompt_zero_shot_keywords.csv_experiment_perquery.csv:
+  Metric: R@10
+    T-test:    stat = -4.1395, p = 0.0001
+    Wilcoxon:  stat = 29.0000, p = 0.0000
+  Metric: R@100
+    T-test:    stat = -4.2704, p = 0.0001
+    Wilcoxon:  stat = 94.0000, p = 0.0001
+  Metric: RR@10
+    T-test:    stat = -5.3465, p = 0.0000
+    Wilcoxon:  stat = 16.5000, p = 0.0000
