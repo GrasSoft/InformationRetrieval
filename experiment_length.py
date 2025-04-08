@@ -51,8 +51,8 @@ for s in size:
 
 
     if len(sys.argv) > 2 and sys.argv[2] == "mod":
-        for filename in os.listdir(f"./query_short/{sys.argv[1]}"):
-            topics_mod = pd.read_csv(f"./query_short/{sys.argv[1]}/{filename}").drop(columns=['orig_query'])[:500]
+        for filename in os.listdir(f"./query_short/trec-covid-misspelled"):
+            topics_mod = pd.read_csv(f"./query_short/trec-covid-misspelled/{filename}").drop(columns=['orig_query'])[:500]
             
             topics_mod['qid'] = topics_mod['qid'].astype(str)
             if "query" in topics:
@@ -73,9 +73,9 @@ for s in size:
             if not os.path.exists(f"./modified/{sys.argv[1]}/{s}/"):
                 os.makedirs(f"./modified/{sys.argv[1]}/{s}/")
 
-            results.to_csv(f"./modified/{sys.argv[1]}/{s}/{filename}_experiment_DENSE_perquery.csv")
+            results.to_csv(f"./modified/{sys.argv[1]}/{s}/{filename}_experiment_DENSE_missp_perquery.csv")
 
-            print(f"Saved results .csv in: ./modified/{sys.argv[1]}/{s}/{filename}_experiment_DENSE_perquery.csv")
+            print(f"Saved results .csv in: ./modified/{sys.argv[1]}/{s}/{filename}_experiment_DENSE_missp_perquery.csv")
             
     else:
         results = pt.Experiment(

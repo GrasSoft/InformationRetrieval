@@ -11,12 +11,12 @@ args = parser.parse_args()
 
 dataset = args.dataset
 sizes = ["small", "medium", "large"]
-output_path = f"DENSE_significance_test_{dataset}.txt"
+output_path = f"significance_test_{dataset}.txt"
 
 # --- Significance Testing ---
 with open(output_path, "w") as outfile:
     for size in sizes:
-        baseline_path = f"./baseline/{dataset}_{size}_DENSE_perquery.csv"
+        baseline_path = f"./baseline/{dataset}_{size}_perquery.csv"
 
         if not os.path.exists(baseline_path):
             outfile.write(f"\nBaseline file missing for size '{size}'\n")
@@ -35,7 +35,7 @@ with open(output_path, "w") as outfile:
         outfile.write(f"==============================\n\n")
 
         for filename in os.listdir(mod_dir):
-            if not filename.endswith("DENSE_perquery.csv"):
+            if not filename.endswith("_perquery.csv"):
                 continue
 
             outfile.write(f"\nResults for {filename}:\n")
