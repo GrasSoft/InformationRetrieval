@@ -1,0 +1,3 @@
+,name,RR@10,R@10,R@100
+0,TerrierRetr(BM25),0.6218333333333333,0.012370428153563035,0.08341705914827025
+1,(TctColBert('castorini/tct_colbert-v2-hnp-msmarco') >> <pyterrier_dr.indexes.NumpyIndex object at 0x7fa5ca359a00>),0.598,0.010427660101918076,0.05815015160267565
