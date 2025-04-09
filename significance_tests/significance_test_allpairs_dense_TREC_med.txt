@@ -1,0 +1,210 @@
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_expansion.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_few_shot_keywords.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0007 → not normal
+    T-test:    stat = -1.9794, p = 0.0664
+    Wilcoxon:  stat = 33.0000, p = 0.1252
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.9326 → normal
+    T-test:    stat = -1.6752, p = 0.1146
+    Wilcoxon:  stat = 33.0000, p = 0.0739
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.2601 → normal
+    T-test:    stat = -1.8275, p = 0.0876
+    Wilcoxon:  stat = 17.0000, p = 0.0814
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_expansion.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_few_shot_reduction.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0016 → not normal
+    T-test:    stat = -2.2617, p = 0.0390
+    Wilcoxon:  stat = 20.0000, p = 0.0231
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.5157 → normal
+    T-test:    stat = -1.4947, p = 0.1557
+    Wilcoxon:  stat = 28.0000, p = 0.0691
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.1639 → normal
+    T-test:    stat = -1.5490, p = 0.1422
+    Wilcoxon:  stat = 13.0000, p = 0.1368
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_expansion.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_expansion.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.5728 → normal
+    T-test:    stat = -0.0987, p = 0.9227
+    Wilcoxon:  stat = 45.0000, p = 0.9721
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.1491 → normal
+    T-test:    stat = -0.2596, p = 0.7987
+    Wilcoxon:  stat = 42.0000, p = 0.5098
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0366 → not normal
+    T-test:    stat = -1.1028, p = 0.2875
+    Wilcoxon:  stat = 10.5000, p = 0.2906
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_expansion.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_keywords.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0017 → not normal
+    T-test:    stat = -1.9991, p = 0.0640
+    Wilcoxon:  stat = 22.0000, p = 0.0555
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.9870 → normal
+    T-test:    stat = -1.3187, p = 0.2070
+    Wilcoxon:  stat = 44.0000, p = 0.2312
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0994 → normal
+    T-test:    stat = -1.9034, p = 0.0764
+    Wilcoxon:  stat = 12.0000, p = 0.0592
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_expansion.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_reduction.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0032 → not normal
+    T-test:    stat = -1.8699, p = 0.0811
+    Wilcoxon:  stat = 30.0000, p = 0.0884
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.7514 → normal
+    T-test:    stat = -1.5314, p = 0.1465
+    Wilcoxon:  stat = 35.0000, p = 0.0934
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0390 → not normal
+    T-test:    stat = -2.1613, p = 0.0472
+    Wilcoxon:  stat = 9.0000, p = 0.0580
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_keywords.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_few_shot_reduction.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -0.9681, p = 0.3483
+    Wilcoxon:  stat = 3.0000, p = 0.4652
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0174 → not normal
+    T-test:    stat = 0.2826, p = 0.7813
+    Wilcoxon:  stat = 19.0000, p = 0.6784
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0002 → not normal
+    T-test:    stat = 0.7510, p = 0.4643
+    Wilcoxon:  stat = 5.0000, p = 0.4982
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_keywords.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_expansion.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0004 → not normal
+    T-test:    stat = 1.9998, p = 0.0640
+    Wilcoxon:  stat = 12.0000, p = 0.0342
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.3486 → normal
+    T-test:    stat = 1.8118, p = 0.0901
+    Wilcoxon:  stat = 26.0000, p = 0.0962
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0057 → not normal
+    T-test:    stat = 0.9694, p = 0.3477
+    Wilcoxon:  stat = 11.0000, p = 0.3264
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_keywords.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_keywords.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0010 → not normal
+    T-test:    stat = -0.0771, p = 0.9395
+    Wilcoxon:  stat = 10.0000, p = 0.9165
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 2.0785, p = 0.0552
+    Wilcoxon:  stat = 0.0000, p = 0.0431
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -0.2692, p = 0.7915
+    Wilcoxon:  stat = 1.0000, p = 0.6547
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_keywords.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_reduction.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0033 → not normal
+    T-test:    stat = 0.0091, p = 0.9929
+    Wilcoxon:  stat = 17.0000, p = 0.8886
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0032 → not normal
+    T-test:    stat = -0.0708, p = 0.9445
+    Wilcoxon:  stat = 18.0000, p = 1.0000
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0030 → not normal
+    T-test:    stat = -0.1853, p = 0.8555
+    Wilcoxon:  stat = 9.5000, p = 0.8330
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_reduction.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_expansion.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0003 → not normal
+    T-test:    stat = 2.2968, p = 0.0365
+    Wilcoxon:  stat = 8.0000, p = 0.0150
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.1207 → normal
+    T-test:    stat = 1.7551, p = 0.0996
+    Wilcoxon:  stat = 24.0000, p = 0.0736
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0361 → not normal
+    T-test:    stat = 0.3157, p = 0.7566
+    Wilcoxon:  stat = 22.0000, p = 0.5738
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_reduction.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_keywords.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0335 → not normal
+    T-test:    stat = 1.1576, p = 0.2651
+    Wilcoxon:  stat = 7.0000, p = 0.2367
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.1918 → normal
+    T-test:    stat = 0.9570, p = 0.3537
+    Wilcoxon:  stat = 19.0000, p = 0.3863
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0001 → not normal
+    T-test:    stat = -0.9487, p = 0.3578
+    Wilcoxon:  stat = 3.0000, p = 0.2228
+
+Comparing /kaggle/input/dense-small/clean_prompt_few_shot_reduction.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_reduction.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 0.5913, p = 0.5631
+    Wilcoxon:  stat = 6.0000, p = 0.6858
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -0.2433, p = 0.8111
+    Wilcoxon:  stat = 10.0000, p = 0.4990
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0002 → not normal
+    T-test:    stat = -0.7755, p = 0.4501
+    Wilcoxon:  stat = 5.0000, p = 0.4982
+
+Comparing /kaggle/input/dense-small/clean_prompt_zero_shot_expansion.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_keywords.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0008 → not normal
+    T-test:    stat = -2.0063, p = 0.0632
+    Wilcoxon:  stat = 26.0000, p = 0.0535
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.3076 → normal
+    T-test:    stat = -1.3819, p = 0.1872
+    Wilcoxon:  stat = 39.0000, p = 0.2330
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0110 → not normal
+    T-test:    stat = -0.9662, p = 0.3493
+    Wilcoxon:  stat = 11.0000, p = 0.3258
+
+Comparing /kaggle/input/dense-small/clean_prompt_zero_shot_expansion.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_reduction.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0004 → not normal
+    T-test:    stat = -1.9501, p = 0.0701
+    Wilcoxon:  stat = 16.0000, p = 0.0392
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.7406 → normal
+    T-test:    stat = -1.7384, p = 0.1026
+    Wilcoxon:  stat = 37.0000, p = 0.1167
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0038 → not normal
+    T-test:    stat = -1.0233, p = 0.3224
+    Wilcoxon:  stat = 7.0000, p = 0.2350
+
+Comparing /kaggle/input/dense-small/clean_prompt_zero_shot_keywords.csv_experiment_DENSE_perquery (1).csv vs /kaggle/input/dense-small/clean_prompt_zero_shot_reduction.csv_experiment_DENSE_perquery (1).csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0003 → not normal
+    T-test:    stat = 0.0474, p = 0.9628
+    Wilcoxon:  stat = 11.0000, p = 0.6121
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0079 → not normal
+    T-test:    stat = -0.9810, p = 0.3422
+    Wilcoxon:  stat = 15.0000, p = 0.3743
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0015 → not normal
+    T-test:    stat = -0.1474, p = 0.8848
+    Wilcoxon:  stat = 7.5000, p = 1.0000

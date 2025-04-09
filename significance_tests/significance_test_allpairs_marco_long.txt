@@ -1,0 +1,150 @@
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_expansion.csv_experiment_perquery.csv vs /kaggle/input/marco-large/clean_prompt_few_shot_keywords.csv_experiment_perquery.csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -3.5852, p = 0.0005
+    Wilcoxon:  stat = 117.0000, p = 0.0003
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -3.9458, p = 0.0001
+    Wilcoxon:  stat = 263.0000, p = 0.0001
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -1.7247, p = 0.0866
+    Wilcoxon:  stat = 465.0000, p = 0.0168
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_expansion.csv_experiment_perquery.csv vs /kaggle/input/marco-large/clean_prompt_few_shot_reduction.csv_experiment_perquery.csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -4.2433, p = 0.0000
+    Wilcoxon:  stat = 103.0000, p = 0.0000
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -4.2040, p = 0.0000
+    Wilcoxon:  stat = 168.5000, p = 0.0000
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -3.4455, p = 0.0007
+    Wilcoxon:  stat = 369.0000, p = 0.0005
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_expansion.csv_experiment_perquery.csv vs /kaggle/input/marco-large/clean_prompt_zero_shot_expansion.csv_experiment_perquery.csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -0.1326, p = 0.8947
+    Wilcoxon:  stat = 214.5000, p = 0.9444
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -1.4163, p = 0.1587
+    Wilcoxon:  stat = 273.0000, p = 0.1797
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 1.0437, p = 0.2983
+    Wilcoxon:  stat = 443.5000, p = 0.7214
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_expansion.csv_experiment_perquery.csv vs /kaggle/input/covid-large/clean_prompt_zero_shot_keywords.csv_experiment_perquery.csv:
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_expansion.csv_experiment_perquery.csv vs /kaggle/input/marco-large/clean_prompt_zero_shot_reduction.csv_experiment_perquery.csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -3.5313, p = 0.0005
+    Wilcoxon:  stat = 121.0000, p = 0.0004
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -3.4199, p = 0.0008
+    Wilcoxon:  stat = 226.0000, p = 0.0007
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -2.6410, p = 0.0091
+    Wilcoxon:  stat = 364.0000, p = 0.0030
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_keywords.csv_experiment_perquery.csv vs /kaggle/input/marco-large/clean_prompt_few_shot_reduction.csv_experiment_perquery.csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -0.9296, p = 0.3540
+    Wilcoxon:  stat = 82.0000, p = 0.3462
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 0.1167, p = 0.9073
+    Wilcoxon:  stat = 94.5000, p = 0.9821
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -2.7930, p = 0.0059
+    Wilcoxon:  stat = 182.0000, p = 0.0176
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_keywords.csv_experiment_perquery.csv vs /kaggle/input/marco-large/clean_prompt_zero_shot_expansion.csv_experiment_perquery.csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 3.3961, p = 0.0009
+    Wilcoxon:  stat = 148.5000, p = 0.0007
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 2.8765, p = 0.0046
+    Wilcoxon:  stat = 229.0000, p = 0.0037
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 2.7248, p = 0.0072
+    Wilcoxon:  stat = 507.5000, p = 0.0070
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_keywords.csv_experiment_perquery.csv vs /kaggle/input/covid-large/clean_prompt_zero_shot_keywords.csv_experiment_perquery.csv:
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_keywords.csv_experiment_perquery.csv vs /kaggle/input/marco-large/clean_prompt_zero_shot_reduction.csv_experiment_perquery.csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 0.1236, p = 0.9018
+    Wilcoxon:  stat = 76.0000, p = 0.9790
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 1.1536, p = 0.2505
+    Wilcoxon:  stat = 46.0000, p = 0.2070
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -1.2834, p = 0.2013
+    Wilcoxon:  stat = 240.5000, p = 0.3294
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_reduction.csv_experiment_perquery.csv vs /kaggle/input/marco-large/clean_prompt_zero_shot_expansion.csv_experiment_perquery.csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 4.0427, p = 0.0001
+    Wilcoxon:  stat = 134.0000, p = 0.0001
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 2.8189, p = 0.0055
+    Wilcoxon:  stat = 235.0000, p = 0.0052
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 4.1686, p = 0.0001
+    Wilcoxon:  stat = 336.0000, p = 0.0001
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_reduction.csv_experiment_perquery.csv vs /kaggle/input/covid-large/clean_prompt_zero_shot_keywords.csv_experiment_perquery.csv:
+
+Comparing /kaggle/input/marco-large/clean_prompt_few_shot_reduction.csv_experiment_perquery.csv vs /kaggle/input/marco-large/clean_prompt_zero_shot_reduction.csv_experiment_perquery.csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 1.3764, p = 0.1707
+    Wilcoxon:  stat = 27.5000, p = 0.1841
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 1.1324, p = 0.2592
+    Wilcoxon:  stat = 35.5000, p = 0.2494
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = 1.9510, p = 0.0529
+    Wilcoxon:  stat = 41.0000, p = 0.0524
+
+Comparing /kaggle/input/marco-large/clean_prompt_zero_shot_expansion.csv_experiment_perquery.csv vs /kaggle/input/covid-large/clean_prompt_zero_shot_keywords.csv_experiment_perquery.csv:
+
+Comparing /kaggle/input/marco-large/clean_prompt_zero_shot_expansion.csv_experiment_perquery.csv vs /kaggle/input/marco-large/clean_prompt_zero_shot_reduction.csv_experiment_perquery.csv:
+  Metric: R@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -3.4520, p = 0.0007
+    Wilcoxon:  stat = 126.0000, p = 0.0007
+  Metric: R@100
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -2.0908, p = 0.0382
+    Wilcoxon:  stat = 287.5000, p = 0.0374
+  Metric: RR@10
+    Normality (Shapiro-Wilk): p = 0.0000 → not normal
+    T-test:    stat = -3.2145, p = 0.0016
+    Wilcoxon:  stat = 362.0000, p = 0.0010
+
+Comparing /kaggle/input/covid-large/clean_prompt_zero_shot_keywords.csv_experiment_perquery.csv vs /kaggle/input/marco-large/clean_prompt_zero_shot_reduction.csv_experiment_perquery.csv:
